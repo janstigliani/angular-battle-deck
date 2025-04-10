@@ -27,18 +27,19 @@ export class DecksComponent {
   }
 
   calculateNum1() {
-      const cardArray = [...this.service.deck1()]
-      const card = cardArray.pop()
-      this.deck1Atk.update(oldValue => oldValue + card!.atk);
-      this.deck1Def.update(oldValue => oldValue + card!.def);
+
+    for (const card of this.service.deck1()) {
+      this.deck1Atk.update(oldValue => oldValue + card.atk);
+      this.deck1Def.update(oldValue => oldValue + card.def);
+    }
 
   }
 
   calculateNum2() {
-    const cardArray = [...this.service.deck2()]
-      const card = cardArray.pop()
-      this.deck1Atk.update(oldValue => oldValue + card!.atk);
-      this.deck1Def.update(oldValue => oldValue + card!.def);
+    for (const card of this.service.deck2()) {
+      this.deck2Atk.update(oldValue => oldValue + card.atk);
+      this.deck2Def.update(oldValue => oldValue + card.def);
+    }
 
   }
 
