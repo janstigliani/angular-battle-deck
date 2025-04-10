@@ -1,0 +1,9 @@
+<h3>Choose your cards</h3>
+<div class="container">
+    <app-card *ngFor="let card of this.service.cardArray()"
+    img="{{card.card_images[0].image_url}}"
+    atk={{card.atk}}
+    def={{card.def}}
+    name="{{card.name}}"
+    ></app-card>
+</div>

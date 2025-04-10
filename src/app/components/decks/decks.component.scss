@@ -1,0 +1,30 @@
+.father{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.deck-1, .deck-2{
+    display: flex;
+    justify-content: center;
+    height:300px;
+    width: 45%;
+}
+
+.deck-1{
+    background-color: rgba(35, 150, 111, 0.658);
+}
+
+.deck-2{
+    background-color: rgba(150, 148, 35, 0.658);
+}
+
+.card-display{
+    display: flex;
+    width: auto;
+}
+
+.img{
+    height: 170px;
+}

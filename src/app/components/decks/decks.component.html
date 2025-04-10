@@ -1,0 +1,20 @@
+<div class="father">
+    
+
+    <div (click)="selectDeck1()" class="deck-1" >
+        <div class="card-display" *ngFor="let card of service.deck1()">
+            <img class="img" src="{{card.card_images[0].image_url}}" alt="">
+        </div>
+        <p>deck 1 atk: def:</p>
+    </div>
+    <div class="compare">
+        <p>The Winner is:</p>
+        <button (click)="compareDecks()">Fight!</button>
+    </div>
+    <div (click)="selectDeck2()" class="deck-2" >
+        <div class="card-display" *ngFor="let card of service.deck2()">
+            <img class="img" src="{{card.card_images[0].image_url}}" alt="">
+        </div>
+        <p>deck 2 atk: def:</p>
+    </div>
+</div>
