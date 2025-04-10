@@ -10,6 +10,7 @@
     <div class="compare">
         <p>The Winner is: {{winner()}}</p>
         <button (click)="compareDecks()">Fight!</button>
+        <button (click)="clearArrayAndNum()">Clear</button>
     </div>
     <div (click)="selectDeck2()" class="deck-2" >
         <div class="card-display" *ngFor="let card of service.deck2()">

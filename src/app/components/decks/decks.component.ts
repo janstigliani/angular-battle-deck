@@ -27,19 +27,18 @@ export class DecksComponent {
   }
 
   calculateNum1() {
-
-    for (const card of this.service.deck1()) {
-      this.deck1Atk.update(oldValue => oldValue + card.atk);
-      this.deck1Def.update(oldValue => oldValue + card.def);
-    }
+      const cardArray = [...this.service.deck1()]
+      const card = cardArray.pop()
+      this.deck1Atk.update(oldValue => oldValue + card!.atk);
+      this.deck1Def.update(oldValue => oldValue + card!.def);
 
   }
 
   calculateNum2() {
-    for (const card of this.service.deck2()) {
-      this.deck2Atk.update(oldValue => oldValue + card.atk);
-      this.deck2Def.update(oldValue => oldValue + card.def);
-    }
+    const cardArray = [...this.service.deck2()]
+      const card = cardArray.pop()
+      this.deck1Atk.update(oldValue => oldValue + card!.atk);
+      this.deck1Def.update(oldValue => oldValue + card!.def);
 
   }
 
@@ -58,9 +57,18 @@ export class DecksComponent {
 
   selectDeck1() {
     this.service.deck1IsSelected = true;
-    }
+  }
   selectDeck2() {
     this.service.deck1IsSelected = false;
-    }
+  }
+
+  clearArrayAndNum() {
+    this.deck1Atk.set(0);
+    this.deck1Def.set(0);
+    this.deck2Atk.set(0);
+    this.deck2Def.set(0);
+    this.winner.set("");
+    this.service.clearDeckArrays();
+  }
 
 }

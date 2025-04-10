@@ -47,4 +47,9 @@ export class YugiService {
       });
     }
   }
+
+  clearDeckArrays() {
+    this.deck1.set([]);
+    this.deck2.set([]);
+  }
 }
