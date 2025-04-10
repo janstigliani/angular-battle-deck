@@ -28,6 +28,8 @@ export class DecksComponent {
 
   calculateNum1() {
 
+    this.deck1Atk.set(0);
+    this.deck1Def.set(0);
     for (const card of this.service.deck1()) {
       this.deck1Atk.update(oldValue => oldValue + card.atk);
       this.deck1Def.update(oldValue => oldValue + card.def);
@@ -36,6 +38,8 @@ export class DecksComponent {
   }
 
   calculateNum2() {
+    this.deck2Atk.set(0);
+    this.deck2Def.set(0);
     for (const card of this.service.deck2()) {
       this.deck2Atk.update(oldValue => oldValue + card.atk);
       this.deck2Def.update(oldValue => oldValue + card.def);
